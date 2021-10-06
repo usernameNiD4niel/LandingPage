@@ -1,0 +1,75 @@
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.85rem 0 2rem;
+  z-index: 1;
+
+  .image-wrapper {
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      width: 140px;
+    }
+  }
+
+  .burger-wrapper {
+    width: 10rem;
+
+    .btn__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      width: 27vw;
+
+      &__item {
+        font-size: 1.1rem;
+        font-family: $font-fam;
+        @include transition;
+
+        &:hover,
+        &:focus {
+          color: $main-color;
+          border: none;
+          outline: 0;
+        }
+      }
+      .active {
+        color: $main-color;
+        border: none;
+        outline: 0;
+        border-bottom: 3px solid $main-color;
+      }
+    }
+  }
+
+  .buy-now {
+    &__btn {
+      margin-bottom: 1rem;
+      word-spacing: 0.02;
+      font-family: $font-fam;
+
+      & a {
+        text-transform: uppercase;
+        font-size: 1rem;
+        border-radius: 25px;
+        padding: 0.59rem 1.3rem;
+        font-weight: 400;
+        background-color: transparent;
+        color: $main-color;
+        border: 1px solid $main-color;
+        @include transition;
+
+        &:hover {
+          background: $main-color;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,306 @@
+.box-shadow-it {
+  position: sticky;
+}
+.about-main-container {
+  flex-direction: column;
+  top: 0;
+  margin-top: 0;
+
+  // ! Ito yung bilog sa may logo
+  .gradient-rounded {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    // right: 0;
+    width: 50%;
+    height: 250px;
+    background: linear-gradient(rgba($main-color, 0.3), $secondary-color);
+
+    border-radius: 0 0 50vw 50vw;
+    // z-index: -10;
+
+    &__absolute {
+      position: absolute;
+      width: 65vw;
+      top: 15vh;
+      left: 39vw;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      .upper-profile {
+        position: absolute;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        width: 100%;
+        padding-bottom: 1.5rem;
+
+        img {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          margin-left: 3.5rem;
+        }
+
+        .gradient-rounded__absolute__profile-desc {
+          width: 450px;
+          margin-left: 5rem;
+          height: 130px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          // filter: drop-shadow(2px 4px 8px, rgba($main-color));
+          filter: drop-shadow(1px 2px 12px $main-color);
+
+          h2 {
+            color: $primary-color;
+            font-weight: 500;
+            font-size: 2.3rem;
+            font-family: $font-fam;
+          }
+          p {
+            font-family: $font-ss;
+          }
+          q {
+            font-family: $kabit-kabit;
+            font-size: 1.55rem;
+          }
+        }
+      }
+
+      &__content {
+        margin-top: 176px;
+        padding: 0 3rem;
+
+        .personal-info {
+          margin-bottom: 1.75rem;
+          h2,
+          p {
+            color: rgba($main-color, 0.7);
+          }
+
+          h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-family: $font-fam;
+          }
+          p {
+            color: rgba($primary-color, 0.8);
+            font-size: 0.95rem;
+            font-family: $font-ss;
+          }
+        }
+      }
+    }
+  }
+
+  .circles {
+    position: absolute;
+    top: 50vh;
+    right: -190px;
+    z-index: -11;
+    overflow: hidden;
+
+    &_1 {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: linear-gradient(rgba($main-color, 0.3), $secondary-color);
+    }
+  }
+
+  .circles2 {
+    position: absolute;
+    top: 95vh;
+    left: -90px;
+    z-index: -11;
+    overflow: hidden;
+
+    &_1 {
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: linear-gradient(
+        to left,
+        rgba($main-color, 0.4),
+        $secondary-color
+      );
+    }
+  }
+  .circles3 {
+    position: absolute;
+    top: 1000px;
+    left: 800px;
+    z-index: -11;
+    overflow: hidden;
+
+    &_1 {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: linear-gradient(rgba($main-color, 0.4), $secondary-color);
+    }
+  }
+}
+.orange {
+  color: $main-color;
+  padding-left: 1.25rem;
+}
+
+footer {
+  position: absolute;
+  bottom: -900px;
+  width: 100%;
+  height: 300px;
+  background: $primary-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .contact-us {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 3rem;
+    flex-direction: column;
+
+    h4,
+    p {
+      color: rgb(187, 186, 186);
+    }
+    h4 {
+      font-size: 1.5rem;
+      color: #000;
+      font-family: "Times New Roman", Times, serif;
+    }
+    p {
+      font-size: 0.85rem;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-bottom: 0.5rem;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: rgba($main-color, 0.9);
+      }
+
+      .social-contacts {
+        color: #000;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .content {
+    color: rgba($main-color, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h4,
+    p {
+      color: rgb(187, 186, 186);
+    }
+    h4 {
+      font-size: 1.5rem;
+      color: #000;
+      font-family: "Times New Roman", Times, serif;
+      margin-bottom: 0.6rem;
+    }
+    p {
+      font-size: 0.85rem;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 25vw;
+    }
+  }
+  .feedback {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    &__desc {
+      margin-bottom: 1rem;
+      font-family: $font-ss;
+
+      p,
+      h3 {
+        color: $secondary-color;
+      }
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+        color: $main-color;
+      }
+    }
+
+    .input-group {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      font-family: Arial, Helvetica, sans-serif;
+
+      .btn-submit {
+        width: 5.5rem;
+        border: none;
+        color: rgba($primary-color, 1);
+        font-size: 1.15rem;
+        background: rgba($main-color, 0.9);
+        border-radius: 0 25px 25px 0;
+        padding-top: 0.3rem;
+        font-family: $font-fam;
+        text-align: center;
+        cursor: pointer;
+        @include transition;
+
+        &:hover {
+          background: transparent;
+          border: 2px solid rgba($main-color, 1);
+          color: rgba($main-color, 1);
+        }
+      }
+    }
+
+    input {
+      font-size: 14px;
+      padding: 8px;
+      display: block;
+      width: 200px;
+      background: transparent;
+      border: 2px solid rgba($main-color, 1);
+      color: $main-color;
+      border-radius: 25px 0 0 25px;
+      text-align: center;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: $main-color;
+      color: #000;
+      background: transparent;
+    }
+
+    label {
+      color: #999;
+      font-size: 1.2rem;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 70px;
+      top: 6px;
+      @include transition;
+    }
+
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -8px;
+      font-size: 14px;
+      color: $main-color;
+      background: $primary-color;
+      padding: 0 0.4rem;
+    }
+  }
+}

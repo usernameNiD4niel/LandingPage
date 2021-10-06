@@ -1,0 +1,17 @@
+@import "config", "header", "main-body-home", "about-main", "services";
+@import "responsive";
+
+body {
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  word-spacing: 1;
+  color: $primary-color;
+  background: $secondary-color;
+  overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+  }
+}

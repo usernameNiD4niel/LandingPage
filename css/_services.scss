@@ -1,0 +1,211 @@
+.services {
+  flex-direction: column;
+  pointer-events: none;
+  justify-content: center;
+  right: 0;
+  width: 100%;
+
+  .services-text {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    // align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 3.9rem;
+    pointer-events: all;
+
+    &-tittle {
+      color: rgba($main-color, 1);
+      font-size: 4rem;
+      font-weight: 400;
+      margin-left: 4rem;
+      font-family: $font-ss;
+    }
+    p {
+      margin-left: 5rem;
+      font-size: 1.9rem;
+      font-family: $kabit-kabit;
+      color: $primary-color;
+    }
+  }
+
+  .underlay-image {
+    position: absolute;
+    margin-left: 3rem;
+    opacity: 0.5;
+    top: 10vh;
+
+    .fas {
+      font-size: 30vw;
+      color: rgba($main-color, 0.7);
+      margin-left: 3rem;
+    }
+  }
+
+  .offers {
+    width: 100%;
+    // height: 100vh;
+    background: rgba($main-color, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    pointer-events: all;
+
+    &__tittle {
+      color: $secondary-color;
+      font-size: 1.96rem;
+      font-family: $font-fam;
+      margin: 1rem auto 0;
+    }
+
+    &__box {
+      margin: 2rem auto 4rem;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      width: 55vw;
+
+      &__desc {
+        width: 19vw;
+        height: 55vh;
+        border-radius: 10px;
+        background: rgba($secondary-color, 0.6);
+        box-shadow: 2px 4px 8px #444;
+        @include transition;
+
+        &:hover,
+        &:focus {
+          box-shadow: 2px 4px 8px #000;
+          color: rgba($main-color, 0.9);
+        }
+
+        img {
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+          margin-bottom: 0.6rem;
+        }
+
+        .hot-wrapper {
+          width: 19%;
+          position: absolute;
+          top: -80px;
+          left: 160px;
+        }
+
+        .hot-wrapper-1 {
+          width: 19%;
+          position: absolute;
+          top: -80px;
+          left: 460px;
+        }
+
+        .prize {
+          display: flex;
+          flex-direction: row;
+          padding-top: 0.7rem;
+          padding-left: 0.3rem;
+          margin-top: 0.3rem;
+          border: none;
+          outline: none;
+          border-top: 1px solid rgba($main-color, 1);
+
+          a {
+            background: rgba($main-color, 0.7);
+            padding: 0.5rem 1.5rem;
+            color: aliceblue;
+            border-radius: 20px;
+            @include transition;
+
+            &:hover,
+            &:focus {
+              border: 1px solid rgba($main-color, 0.9);
+              color: rgba($main-color, 0.9);
+              background: transparent;
+            }
+          }
+
+          p {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+          }
+          .more {
+            border: 1px solid rgba($main-color, 0.9);
+            color: rgba($main-color, 0.9);
+            background: transparent;
+            margin-left: 0.8rem;
+          }
+        }
+
+        h3 {
+          padding: 0 0.5rem;
+          font-family: $font-ss;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+        }
+        p {
+          padding: 0 0.5rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .rating-advantages {
+    width: 100vw;
+    background: $secondary-color;
+    pointer-events: all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000;
+
+    .why-choose-us {
+      display: flex;
+      justify-content: center;
+      width: 50vw;
+      margin: 3rem 0 2rem;
+
+      h2 {
+        color: $primary-color;
+        font-size: 3.5rem;
+        font-family: $font-ss;
+      }
+    }
+
+    .advantages {
+      padding: 1rem 4rem 4rem;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-row-gap: 3rem;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+
+      &-1 {
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        .fas {
+          font-size: 5vw;
+          padding-right: 0.7rem;
+        }
+
+        .wrapper-content {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.footer-service {
+  bottom: -1900px;
+}
